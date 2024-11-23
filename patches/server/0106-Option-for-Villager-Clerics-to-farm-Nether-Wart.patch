@@ -136,10 +136,10 @@ index a0e0692d17760f440fe81d52887284c787e562db..ab9bebc07b5228dbc0d3ba4b0f7d1bbe
              brain.setMemory(MemoryModuleType.SECONDARY_JOB_SITE, list);
          } else {
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 62a1d6876ce75676c5fa381e48bc58b8ef92701b..666ab4c3c957db48783d8b891737370c3ced881c 100644
+index 17855ea5f5de683a1e3ea3c077a87ff83344db4f..042abe197b2110c96fbe5789bed234676348cf91 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-@@ -224,7 +224,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -227,7 +227,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
              brain.addActivity(Activity.PLAY, VillagerGoalPackages.getPlayPackage(0.5F));
          } else {
              brain.setSchedule(Schedule.VILLAGER_DEFAULT);
@@ -148,7 +148,7 @@ index 62a1d6876ce75676c5fa381e48bc58b8ef92701b..666ab4c3c957db48783d8b891737370c
          }
  
          brain.addActivity(Activity.CORE, VillagerGoalPackages.getCorePackage(villagerprofession, 0.5F));
-@@ -940,6 +940,11 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -944,6 +944,11 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
  
      public boolean hasFarmSeeds() {
          return this.getInventory().hasAnyMatching((itemstack) -> {
@@ -174,10 +174,10 @@ index 8734ab1bd8299bbf43906d81a349c2a13e0981a7..3ca83269311cbc18c9ef3ce62cff6a2d
          "farmer",
          PoiTypes.FARMER,
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 60c89f3e4cbf5b02479dacd21ebe61ef41bc3478..5e1da3824ef5e8dc9333f2248fde1548f496abc1 100644
+index 05def5b223af950f258978f5ee288da12feac71e..4ecf15fdb49b2e3741915f4a5b28b48f4dbd09be 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1906,6 +1906,8 @@ public class PurpurWorldConfig {
+@@ -1907,6 +1907,8 @@ public class PurpurWorldConfig {
      public boolean villagerCanBeLeashed = false;
      public boolean villagerCanBreed = true;
      public int villagerBreedingTicks = 6000;
@@ -186,7 +186,7 @@ index 60c89f3e4cbf5b02479dacd21ebe61ef41bc3478..5e1da3824ef5e8dc9333f2248fde1548
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -1921,6 +1923,8 @@ public class PurpurWorldConfig {
+@@ -1925,6 +1927,8 @@ public class PurpurWorldConfig {
          villagerCanBeLeashed = getBoolean("mobs.villager.can-be-leashed", villagerCanBeLeashed);
          villagerCanBreed = getBoolean("mobs.villager.can-breed", villagerCanBreed);
          villagerBreedingTicks = getInt("mobs.villager.breeding-delay-ticks", villagerBreedingTicks);
