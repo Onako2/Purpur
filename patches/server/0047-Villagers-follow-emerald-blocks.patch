@@ -43,7 +43,7 @@ index 5f656fc726a1dc5f42657095a2f2b7cf85b92d7c..6c74cf1dea99b3b967b8c3d76f405f82
      // CraftBukkit start
      @Override
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 37c26008486ffdf7f1d6bdfd0253067a1c6bf942..fd7c6835d3153c40a23c63f197c68cbfef2ceae2 100644
+index 37c26008486ffdf7f1d6bdfd0253067a1c6bf942..aad307477e687db1a7868cca6674b1226dfd5035 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
 @@ -175,6 +175,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
@@ -67,12 +67,12 @@ index 37c26008486ffdf7f1d6bdfd0253067a1c6bf942..fd7c6835d3153c40a23c63f197c68cbf
  
      public static AttributeSupplier.Builder createAttributes() {
 -        return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.5D);
-+        return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.5D).add(Attributes.TEMPT_RANGE); // Purpur - add TEMPT_RANGE
++        return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.5D).add(Attributes.TEMPT_RANGE, 10.0D); // Purpur - add TEMPT_RANGE
      }
  
      public boolean assignProfessionWhenSpawned() {
 diff --git a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-index f741aca818bc983b034b3ac9864c1d71c714f9b4..912660873f60b00d354f0be5d0c8f74e284d61c7 100644
+index f741aca818bc983b034b3ac9864c1d71c714f9b4..a821a7bc7de7458ceb8afdb61bde32f74534f012 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 @@ -92,8 +92,15 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
@@ -84,7 +84,7 @@ index f741aca818bc983b034b3ac9864c1d71c714f9b4..912660873f60b00d354f0be5d0c8f74e
  
 +    // Purpur start
 +    public static net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder createAttributes() {
-+        return Mob.createMobAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.TEMPT_RANGE);
++        return Mob.createMobAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.TEMPT_RANGE, 10.0D);
 +    }
 +    // Purpur end
 +
