@@ -6,10 +6,10 @@ Subject: [PATCH] Implement configurable search radius for villagers to spawn
 
 
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 51e09297e326f424f6ed19a67668c4e9ed4d827e..ccb6da30a3eab466e745e9a431a4588b306a9e71 100644
+index 08ab49015ca5af28c97611bda0037f34fa3f6ee3..2afe9d677173e2b01dac34d9bc552ea8cd9357a7 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-@@ -1069,6 +1069,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -1066,6 +1066,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
      }
  
      public void spawnGolemIfNeeded(ServerLevel world, long time, int requiredCount) {

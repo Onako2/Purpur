@@ -5,7 +5,7 @@ Subject: [PATCH] Lobotomize stuck villagers
 
 
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index ec5cd4b14a59e853a16bcbee02d52edcc667015c..51e09297e326f424f6ed19a67668c4e9ed4d827e 100644
+index 81b81b89bd624f27a1d195b9c6a6395b170cfaac..08ab49015ca5af28c97611bda0037f34fa3f6ee3 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
 @@ -141,6 +141,8 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
@@ -17,7 +17,7 @@ index ec5cd4b14a59e853a16bcbee02d52edcc667015c..51e09297e326f424f6ed19a67668c4e9
  
      public Villager(EntityType<? extends Villager> entityType, Level world) {
          this(entityType, world, VillagerType.PLAINS);
-@@ -203,6 +205,48 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -201,6 +203,48 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
          return this.level().purpurConfig.villagerAlwaysDropExp;
      }
  
@@ -66,7 +66,7 @@ index ec5cd4b14a59e853a16bcbee02d52edcc667015c..51e09297e326f424f6ed19a67668c4e9
      @Override
      public Brain<Villager> getBrain() {
          return (Brain<Villager>) super.getBrain(); // CraftBukkit - decompile error
-@@ -298,11 +342,19 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -295,11 +339,19 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
          // Paper start - EAR 2
          this.customServerAiStep(world, false);
      }

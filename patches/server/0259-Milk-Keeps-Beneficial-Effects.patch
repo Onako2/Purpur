@@ -17,10 +17,10 @@ index 34f3ae000a794da60bdfe3072071143b3fdfd971..1e312afb4abcc9581c2a6097532a8dfb
                  if (event.isCancelled()) {
                      continue;
 diff --git a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-index df9fa6dd4952a5dae47ef22bd10ef01b809da3fb..ef3372ac436ee2d74eed94d27ab863c21fe9664a 100644
+index a8cbf8cc21b0835a040901ee34f240cd327ad073..b6a866438b582adabe8395e0d4167d2187042e65 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-@@ -125,7 +125,7 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
+@@ -123,7 +123,7 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
              return this.canDrinkPotion && this.level().isNight() && !entityvillagertrader.isInvisible(); // Paper - Add more WanderingTrader API
          }));
          this.goalSelector.addGoal(0, new UseItemGoal<>(this, new ItemStack(Items.MILK_BUCKET), SoundEvents.WANDERING_TRADER_REAPPEARED, (entityvillagertrader) -> {

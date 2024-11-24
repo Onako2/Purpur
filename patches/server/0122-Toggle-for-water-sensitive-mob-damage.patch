@@ -395,7 +395,7 @@ index 6b2e27e2f8aeccfc4d84c73be0fa5a04f5a962e2..96a6f13fe6ea02412974fd4c8cf01546
          this.entityData.set(Turtle.HOME_POS, pos);
      }
 diff --git a/src/main/java/net/minecraft/world/entity/animal/Wolf.java b/src/main/java/net/minecraft/world/entity/animal/Wolf.java
-index 7343c5a81ddf7db1e9e434796489fd8a98b9a70c..91474a8a795a278493c07002bd99ec75effa659c 100644
+index 89566a88a98af2e4ec2b062ed12d4828a32b576d..6e3ed974f6e55aed8ae83fc90e8ae8a7ee2bb8a8 100644
 --- a/src/main/java/net/minecraft/world/entity/animal/Wolf.java
 +++ b/src/main/java/net/minecraft/world/entity/animal/Wolf.java
 @@ -218,6 +218,11 @@ public class Wolf extends TamableAnimal implements NeutralMob, VariantHolder<Hol
@@ -1167,12 +1167,12 @@ index 6459e588e6feb6d7bcf999e36b658bbad4069af2..9c196b0cf49cb6f69bd17748fd13ce59
          return Monster.createMonsterAttributes()
              .add(Attributes.MAX_HEALTH, 50.0)
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 042abe197b2110c96fbe5789bed234676348cf91..8cff86cda42abe3574bf1bbd376f94598cbd99b7 100644
+index 37355316b4ac3bbfc0f8554414aa49fe5e2a36b6..b6f9b9e67ab906720b416e22c19fb31271c7dd7f 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-@@ -193,6 +193,11 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -191,6 +191,11 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+         this.getAttribute(Attributes.TEMPT_RANGE).setBaseValue(this.level().purpurConfig.villagerTemptRange); // Purpur
      }
-     // Purpur end
  
 +    @Override
 +    public boolean isSensitiveToWater() {
@@ -1183,10 +1183,10 @@ index 042abe197b2110c96fbe5789bed234676348cf91..8cff86cda42abe3574bf1bbd376f9459
      public Brain<Villager> getBrain() {
          return (Brain<Villager>) super.getBrain(); // CraftBukkit - decompile error
 diff --git a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-index a426309201d573440679862f0ace70a47a955937..1b1c66cd72faad4869f8e165c7133fa84dbed55c 100644
+index 2f443b0c06a6f1c8db52900203dd1ef46601ef45..4ce7687154ac4c7188ea15325a7d2117ca98b79a 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-@@ -108,6 +108,11 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
+@@ -106,6 +106,11 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
      }
      // Purpur end
  

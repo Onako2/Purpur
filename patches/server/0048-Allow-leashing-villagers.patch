@@ -17,7 +17,7 @@ index 1e639ab3e48d884ee6e2c33be85dde51e24183b6..75b0a66be9f94c82a02f714860ae8bee
                      // Paper start - Expand EntityUnleashEvent
                      org.bukkit.event.player.PlayerUnleashEntityEvent event = CraftEventFactory.callPlayerUnleashEntityEvent(this, player, hand, !player.hasInfiniteMaterials());
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 90c898e4e3c2a38fd5c881bf08f3df0644238e71..13e0efb3d9a4b192313a9a700dab6b3b3c10c58a 100644
+index fd7c6835d3153c40a23c63f197c68cbfef2ceae2..aab9c6cbe88e9dea7c17d30e16aaf6a0bc417525 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
 @@ -177,6 +177,11 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
@@ -31,12 +31,12 @@ index 90c898e4e3c2a38fd5c881bf08f3df0644238e71..13e0efb3d9a4b192313a9a700dab6b3b
 +    }
      // Purpur end
  
-     // Purpur start
+     @Override
 diff --git a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-index 8bea93ea99546c0e79572e6adb8f8244eb79e87d..a426309201d573440679862f0ace70a47a955937 100644
+index 912660873f60b00d354f0be5d0c8f74e284d61c7..2f443b0c06a6f1c8db52900203dd1ef46601ef45 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-@@ -89,6 +89,11 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
+@@ -87,6 +87,11 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
      public boolean isControllable() {
          return level().purpurConfig.wanderingTraderControllable;
      }

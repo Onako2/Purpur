@@ -5,10 +5,10 @@ Subject: [PATCH] Configurable villager breeding
 
 
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 13e0efb3d9a4b192313a9a700dab6b3b3c10c58a..17855ea5f5de683a1e3ea3c077a87ff83344db4f 100644
+index aab9c6cbe88e9dea7c17d30e16aaf6a0bc417525..d9cfbd7f169e469ba2b0e10e79143f6b5037dd7e 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-@@ -765,7 +765,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -762,7 +762,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
  
      @Override
      public boolean canBreed() {

@@ -9,10 +9,10 @@ This patch adds a config option to allow the minimum demand to instead
 be configurable.
 
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 0a255bd73213815e773dd867c44235d08ebb829b..ec5cd4b14a59e853a16bcbee02d52edcc667015c 100644
+index 5e693068ed50e4d732fa023c82a480dd89378a3c..81b81b89bd624f27a1d195b9c6a6395b170cfaac 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-@@ -543,7 +543,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -540,7 +540,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
          while (iterator.hasNext()) {
              MerchantOffer merchantrecipe = (MerchantOffer) iterator.next();
  

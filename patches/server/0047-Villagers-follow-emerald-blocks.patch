@@ -43,10 +43,10 @@ index 5f656fc726a1dc5f42657095a2f2b7cf85b92d7c..6c74cf1dea99b3b967b8c3d76f405f82
      // CraftBukkit start
      @Override
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 37c26008486ffdf7f1d6bdfd0253067a1c6bf942..90c898e4e3c2a38fd5c881bf08f3df0644238e71 100644
+index 37c26008486ffdf7f1d6bdfd0253067a1c6bf942..fd7c6835d3153c40a23c63f197c68cbfef2ceae2 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-@@ -175,14 +175,18 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -175,6 +175,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
      @Override
      protected void registerGoals() {
          this.goalSelector.addGoal(0, new org.purpurmc.purpur.entity.ai.HasRider(this));
@@ -54,57 +54,44 @@ index 37c26008486ffdf7f1d6bdfd0253067a1c6bf942..90c898e4e3c2a38fd5c881bf08f3df06
      }
      // Purpur end
  
-+    // Purpur start
-     @Override
+@@ -182,6 +183,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
      public void initAttributes() {
          this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(this.level().purpurConfig.villagerMaxHealth);
          this.getAttribute(Attributes.SCALE).setBaseValue(this.level().purpurConfig.villagerScale);
-+        this.getAttribute(Attributes.TEMPT_RANGE).setBaseValue(this.level().purpurConfig.villagerTemptRange);
++        this.getAttribute(Attributes.TEMPT_RANGE).setBaseValue(this.level().purpurConfig.villagerTemptRange); // Purpur
      }
-+    // Purpur end
  
      @Override
-     public Brain<Villager> getBrain() {
-@@ -245,7 +249,8 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -245,7 +247,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
      }
  
      public static AttributeSupplier.Builder createAttributes() {
 -        return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.5D);
-+        return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.5D)
-+            .add(Attributes.TEMPT_RANGE); // Purpur
++        return Mob.createMobAttributes().add(Attributes.MOVEMENT_SPEED, 0.5D).add(Attributes.TEMPT_RANGE); // Purpur - add TEMPT_RANGE
      }
  
      public boolean assignProfessionWhenSpawned() {
 diff --git a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-index f741aca818bc983b034b3ac9864c1d71c714f9b4..8bea93ea99546c0e79572e6adb8f8244eb79e87d 100644
+index f741aca818bc983b034b3ac9864c1d71c714f9b4..912660873f60b00d354f0be5d0c8f74e284d61c7 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-@@ -17,6 +17,8 @@ import net.minecraft.world.entity.AgeableMob;
- import net.minecraft.world.entity.EntityType;
- import net.minecraft.world.entity.ExperienceOrb;
- import net.minecraft.world.entity.Mob;
-+import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-+import net.minecraft.world.entity.ai.attributes.Attributes;
- import net.minecraft.world.entity.ai.goal.AvoidEntityGoal;
- import net.minecraft.world.entity.ai.goal.FloatGoal;
- import net.minecraft.world.entity.ai.goal.Goal;
-@@ -92,8 +94,15 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
+@@ -92,8 +92,15 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
      @Override
      public void initAttributes() {
          this.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.MAX_HEALTH).setBaseValue(this.level().purpurConfig.wanderingTraderMaxHealth);
-+        this.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.TEMPT_RANGE).setBaseValue(this.level().purpurConfig.wanderingTraderTemptRange);
++        this.getAttribute(net.minecraft.world.entity.ai.attributes.Attributes.TEMPT_RANGE).setBaseValue(this.level().purpurConfig.wanderingTraderTemptRange); // Purpur
      }
  
 +    // Purpur start
-+    public static AttributeSupplier.Builder createAttributes() {
-+        return Mob.createMobAttributes().add(Attributes.TEMPT_RANGE);
++    public static net.minecraft.world.entity.ai.attributes.AttributeSupplier.Builder createAttributes() {
++        return Mob.createMobAttributes().add(net.minecraft.world.entity.ai.attributes.Attributes.TEMPT_RANGE);
 +    }
 +    // Purpur end
 +
      @Override
      protected void registerGoals() {
          this.goalSelector.addGoal(0, new FloatGoal(this));
-@@ -114,6 +123,7 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
+@@ -114,6 +121,7 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
          this.goalSelector.addGoal(1, new PanicGoal(this, 0.5D));
          this.goalSelector.addGoal(1, new LookAtTradingPlayerGoal(this));
          this.goalSelector.addGoal(2, new WanderingTrader.WanderToPositionGoal(this, 2.0D, 0.35D));

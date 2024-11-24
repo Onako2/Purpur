@@ -5,10 +5,10 @@ Subject: [PATCH] Add config for villager trading
 
 
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index 8cff86cda42abe3574bf1bbd376f94598cbd99b7..c6fc1c361bf278757164c85d727caee7eb69722f 100644
+index b6f9b9e67ab906720b416e22c19fb31271c7dd7f..9efd57ffc088e5239a0c94bd8da30c6fd32a5ad6 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-@@ -373,6 +373,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
+@@ -370,6 +370,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
                      }
  
                      if (level().purpurConfig.villagerRidable && itemstack.isEmpty()) return tryRide(player, hand); // Purpur
@@ -17,10 +17,10 @@ index 8cff86cda42abe3574bf1bbd376f94598cbd99b7..c6fc1c361bf278757164c85d727caee7
                  }
  
 diff --git a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-index 1b1c66cd72faad4869f8e165c7133fa84dbed55c..1598ca21c6c1b588ab774bb5f0e9ce063620f553 100644
+index 4ce7687154ac4c7188ea15325a7d2117ca98b79a..5ffe9bf4e325570fef0b23d3fcb0b5d9afac4107 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-@@ -165,8 +165,10 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
+@@ -163,8 +163,10 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
                      return tryRide(player, hand, InteractionResult.CONSUME); // Purpur
                  }
                  if (level().purpurConfig.wanderingTraderRidable && itemstack.isEmpty()) return tryRide(player, hand); // Purpur
