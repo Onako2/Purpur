@@ -5,7 +5,7 @@ Subject: [PATCH] Configurable villager breeding
 
 
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index aab9c6cbe88e9dea7c17d30e16aaf6a0bc417525..d9cfbd7f169e469ba2b0e10e79143f6b5037dd7e 100644
+index 329db0049e0792b2c066349849ebd7c26a9178d7..c50cfa8225d5098f978da42cdf6c6860e93e9f2a 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
 @@ -762,7 +762,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
@@ -18,7 +18,7 @@ index aab9c6cbe88e9dea7c17d30e16aaf6a0bc417525..d9cfbd7f169e469ba2b0e10e79143f6b
  
      private boolean hungry() {
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 989dc88a63aa41f1d2a6b937589c888aca4d89c6..8545d5c17caabbf54086e5c98b6f9d33f588d879 100644
+index 296285cd96f0b1a96216608474c78ef5333ae110..1510a14f18851c6906a0ae9249f0fbf8b0edc750 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 @@ -1746,6 +1746,7 @@ public class PurpurWorldConfig {
@@ -29,9 +29,9 @@ index 989dc88a63aa41f1d2a6b937589c888aca4d89c6..8545d5c17caabbf54086e5c98b6f9d33
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -1762,6 +1763,7 @@ public class PurpurWorldConfig {
-             villagerTemptRange = getDouble("mobs.villager.attributes.tempt_range", villagerTemptRange);
-         }
+@@ -1760,6 +1761,7 @@ public class PurpurWorldConfig {
+         villagerFollowEmeraldBlock = getBoolean("mobs.villager.follow-emerald-blocks", villagerFollowEmeraldBlock);
+         villagerTemptRange = getDouble("mobs.villager.attributes.tempt_range", villagerTemptRange);
          villagerCanBeLeashed = getBoolean("mobs.villager.can-be-leashed", villagerCanBeLeashed);
 +        villagerCanBreed = getBoolean("mobs.villager.can-breed", villagerCanBreed);
      }

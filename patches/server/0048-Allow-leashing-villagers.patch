@@ -17,7 +17,7 @@ index 1e639ab3e48d884ee6e2c33be85dde51e24183b6..75b0a66be9f94c82a02f714860ae8bee
                      // Paper start - Expand EntityUnleashEvent
                      org.bukkit.event.player.PlayerUnleashEntityEvent event = CraftEventFactory.callPlayerUnleashEntityEvent(this, player, hand, !player.hasInfiniteMaterials());
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index fd7c6835d3153c40a23c63f197c68cbfef2ceae2..aab9c6cbe88e9dea7c17d30e16aaf6a0bc417525 100644
+index aad307477e687db1a7868cca6674b1226dfd5035..329db0049e0792b2c066349849ebd7c26a9178d7 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
 @@ -177,6 +177,11 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
@@ -33,7 +33,7 @@ index fd7c6835d3153c40a23c63f197c68cbfef2ceae2..aab9c6cbe88e9dea7c17d30e16aaf6a0
  
      @Override
 diff --git a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-index 912660873f60b00d354f0be5d0c8f74e284d61c7..2f443b0c06a6f1c8db52900203dd1ef46601ef45 100644
+index a821a7bc7de7458ceb8afdb61bde32f74534f012..738df68a988a8ba428bf2c74a12cb8d9dd525bee 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 @@ -87,6 +87,11 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
@@ -49,7 +49,7 @@ index 912660873f60b00d354f0be5d0c8f74e284d61c7..2f443b0c06a6f1c8db52900203dd1ef4
  
      @Override
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index cc2987e162db8089731a51e4c522e02d43c8b17e..fa65e1f7b78677027fb45065708550fed826d0ac 100644
+index a36fd98b7acaa8bf9107f5f1a7091437eb2ea829..daf3b319422d22cb33a945033aa45e55a0f4e116 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 @@ -1577,6 +1577,7 @@ public class PurpurWorldConfig {
@@ -60,15 +60,15 @@ index cc2987e162db8089731a51e4c522e02d43c8b17e..fa65e1f7b78677027fb45065708550fe
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -1592,6 +1593,7 @@ public class PurpurWorldConfig {
-         if (villagerFollowEmeraldBlock) {
-             villagerTemptRange = getDouble("mobs.villager.attributes.tempt_range", villagerTemptRange);
-         }
+@@ -1590,6 +1591,7 @@ public class PurpurWorldConfig {
+         villagerScale = Mth.clamp(getDouble("mobs.villager.attributes.scale", villagerScale), 0.0625D, 16.0D);
+         villagerFollowEmeraldBlock = getBoolean("mobs.villager.follow-emerald-blocks", villagerFollowEmeraldBlock);
+         villagerTemptRange = getDouble("mobs.villager.attributes.tempt_range", villagerTemptRange);
 +        villagerCanBeLeashed = getBoolean("mobs.villager.can-be-leashed", villagerCanBeLeashed);
      }
  
      public boolean vindicatorRidable = false;
-@@ -1619,6 +1621,7 @@ public class PurpurWorldConfig {
+@@ -1617,6 +1619,7 @@ public class PurpurWorldConfig {
      public double wanderingTraderScale = 1.0D;
      public boolean wanderingTraderFollowEmeraldBlock = false;
      public double wanderingTraderTemptRange = 10.0D;
@@ -76,10 +76,10 @@ index cc2987e162db8089731a51e4c522e02d43c8b17e..fa65e1f7b78677027fb45065708550fe
      private void wanderingTraderSettings() {
          wanderingTraderRidable = getBoolean("mobs.wandering_trader.ridable", wanderingTraderRidable);
          wanderingTraderRidableInWater = getBoolean("mobs.wandering_trader.ridable-in-water", wanderingTraderRidableInWater);
-@@ -1634,6 +1637,7 @@ public class PurpurWorldConfig {
-         if (wanderingTraderFollowEmeraldBlock) {
-             wanderingTraderTemptRange = getDouble("mobs.wandering_trader.attributes.tempt_range", wanderingTraderTemptRange);
-         }
+@@ -1630,6 +1633,7 @@ public class PurpurWorldConfig {
+         wanderingTraderScale = Mth.clamp(getDouble("mobs.wandering_trader.attributes.scale", wanderingTraderScale), 0.0625D, 16.0D);
+         wanderingTraderFollowEmeraldBlock = getBoolean("mobs.wandering_trader.follow-emerald-blocks", wanderingTraderFollowEmeraldBlock);
+         wanderingTraderTemptRange = getDouble("mobs.wandering_trader.attributes.tempt_range", wanderingTraderTemptRange);
 +        wanderingTraderCanBeLeashed = getBoolean("mobs.wandering_trader.can-be-leashed", wanderingTraderCanBeLeashed);
      }
  

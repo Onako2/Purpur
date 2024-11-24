@@ -284,7 +284,7 @@ index 500676a78aedc525aca989ccd0380cd2cc1a711b..6b2e27e2f8aeccfc4d84c73be0fa5a04
          this.entityData.set(Turtle.HOME_POS, pos);
      }
 diff --git a/src/main/java/net/minecraft/world/entity/animal/Wolf.java b/src/main/java/net/minecraft/world/entity/animal/Wolf.java
-index d082ca3ed17e8bbb27c1a971259720d43246b47f..bbdc5eb28c2be570866070d2d055a97721f46d94 100644
+index 40a766e20d1a2111d561cc05aa49e2ac50187d19..bb2e5e97d33ffaf95a6c88b3c077de1a89a60c6e 100644
 --- a/src/main/java/net/minecraft/world/entity/animal/Wolf.java
 +++ b/src/main/java/net/minecraft/world/entity/animal/Wolf.java
 @@ -152,6 +152,11 @@ public class Wolf extends TamableAnimal implements NeutralMob, VariantHolder<Hol
@@ -538,7 +538,7 @@ index 08c4a32b1195820eb574cdf4a499107565a551d6..0220fb517d99e8c9629d191eb554799a
      public boolean canBeLeashed() {
          return true;
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 96f19a404ee604236d23846f3baeb12799093eb8..c5d9a618ce7fd0b4a435bd79917fdc00e8a24a48 100644
+index 62791c5dc87b1c392db4eaf2359c6625e1bff8e5..ffe18a49ecceee710843d9f32688adc808cf6477 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 @@ -463,23 +463,27 @@ public class PurpurWorldConfig {
@@ -956,15 +956,15 @@ index 96f19a404ee604236d23846f3baeb12799093eb8..c5d9a618ce7fd0b4a435bd79917fdc00
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -1845,6 +1898,7 @@ public class PurpurWorldConfig {
-         }
+@@ -1843,6 +1896,7 @@ public class PurpurWorldConfig {
+         villagerTemptRange = getDouble("mobs.villager.attributes.tempt_range", villagerTemptRange);
          villagerCanBeLeashed = getBoolean("mobs.villager.can-be-leashed", villagerCanBeLeashed);
          villagerCanBreed = getBoolean("mobs.villager.can-breed", villagerCanBreed);
 +        villagerBreedingTicks = getInt("mobs.villager.breeding-delay-ticks", villagerBreedingTicks);
      }
  
      public boolean vindicatorRidable = false;
-@@ -1971,6 +2025,7 @@ public class PurpurWorldConfig {
+@@ -1967,6 +2021,7 @@ public class PurpurWorldConfig {
      public boolean wolfControllable = true;
      public double wolfMaxHealth = 8.0D;
      public double wolfScale = 1.0D;
@@ -972,7 +972,7 @@ index 96f19a404ee604236d23846f3baeb12799093eb8..c5d9a618ce7fd0b4a435bd79917fdc00
      private void wolfSettings() {
          wolfRidable = getBoolean("mobs.wolf.ridable", wolfRidable);
          wolfRidableInWater = getBoolean("mobs.wolf.ridable-in-water", wolfRidableInWater);
-@@ -1982,6 +2037,7 @@ public class PurpurWorldConfig {
+@@ -1978,6 +2033,7 @@ public class PurpurWorldConfig {
          }
          wolfMaxHealth = getDouble("mobs.wolf.attributes.max_health", wolfMaxHealth);
          wolfScale = Mth.clamp(getDouble("mobs.wolf.attributes.scale", wolfScale), 0.0625D, 16.0D);

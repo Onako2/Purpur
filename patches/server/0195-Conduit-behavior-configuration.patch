@@ -97,10 +97,10 @@ index c1759aeb3e6ad0e4eb66cba3da1b120dd1dce812..1a91bc2e422db0eba65694ac046f1b36
  
      @Override
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index b2c6f5fc2452b1d3efa75fabfa66f47c31b1a11b..35470fb8b90888f6f4b3d36c9a042b822fe65f9d 100644
+index 3c99a7d692215c4906f206052c6544164827ac7f..3cf070d9bb17c36d70df8f831c05a17f4b1b59ba 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -3021,4 +3021,27 @@ public class PurpurWorldConfig {
+@@ -3017,4 +3017,27 @@ public class PurpurWorldConfig {
      private void hungerSettings() {
          hungerStarvationDamage = (float) getDouble("hunger.starvation-damage", hungerStarvationDamage);
      }

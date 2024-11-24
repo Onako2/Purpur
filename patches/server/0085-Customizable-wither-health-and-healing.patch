@@ -23,10 +23,10 @@ index f55842cf85dec8e5c26cd5ac52c63599f3b19cf3..2ec12ec298446b556132785d4d376130
  
              this.bossEvent.setProgress(this.getHealth() / this.getMaxHealth());
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 478756e5e1f5e2fe4878715687d7d6e7d4b10128..292c94de066a82e46f164c408c38d272a7ac0349 100644
+index ba1bf7fe6ffe74b832a0d247a82f510b02597a12..9698423ff57ff7aac8d7e222230059c5984afc59 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1867,6 +1867,8 @@ public class PurpurWorldConfig {
+@@ -1863,6 +1863,8 @@ public class PurpurWorldConfig {
      public double witherMaxY = 320D;
      public double witherMaxHealth = 300.0D;
      public double witherScale = 1.0D;
@@ -35,7 +35,7 @@ index 478756e5e1f5e2fe4878715687d7d6e7d4b10128..292c94de066a82e46f164c408c38d272
      private void witherSettings() {
          witherRidable = getBoolean("mobs.wither.ridable", witherRidable);
          witherRidableInWater = getBoolean("mobs.wither.ridable-in-water", witherRidableInWater);
-@@ -1883,6 +1885,8 @@ public class PurpurWorldConfig {
+@@ -1879,6 +1881,8 @@ public class PurpurWorldConfig {
          }
          witherMaxHealth = getDouble("mobs.wither.attributes.max_health", witherMaxHealth);
          witherScale = Mth.clamp(getDouble("mobs.wither.attributes.scale", witherScale), 0.0625D, 16.0D);

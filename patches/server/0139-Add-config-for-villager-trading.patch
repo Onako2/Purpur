@@ -5,7 +5,7 @@ Subject: [PATCH] Add config for villager trading
 
 
 diff --git a/src/main/java/net/minecraft/world/entity/npc/Villager.java b/src/main/java/net/minecraft/world/entity/npc/Villager.java
-index b6f9b9e67ab906720b416e22c19fb31271c7dd7f..9efd57ffc088e5239a0c94bd8da30c6fd32a5ad6 100644
+index 35622b60a6b98251080fec444b335ecf617a4cce..039187f2f8ad4f889b25ce27d1253e4f53d51163 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/Villager.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/Villager.java
 @@ -370,6 +370,7 @@ public class Villager extends AbstractVillager implements ReputationEventHandler
@@ -17,7 +17,7 @@ index b6f9b9e67ab906720b416e22c19fb31271c7dd7f..9efd57ffc088e5239a0c94bd8da30c6f
                  }
  
 diff --git a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
-index 4ce7687154ac4c7188ea15325a7d2117ca98b79a..5ffe9bf4e325570fef0b23d3fcb0b5d9afac4107 100644
+index 116f47c7342dade1eaf0fabc62fb0ba2edd4c578..ba7856973d22c031910df4ec2a84d101c540198c 100644
 --- a/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 +++ b/src/main/java/net/minecraft/world/entity/npc/WanderingTrader.java
 @@ -163,8 +163,10 @@ public class WanderingTrader extends net.minecraft.world.entity.npc.AbstractVill
@@ -32,7 +32,7 @@ index 4ce7687154ac4c7188ea15325a7d2117ca98b79a..5ffe9bf4e325570fef0b23d3fcb0b5d9
  
              return InteractionResult.SUCCESS;
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 4aa38f92f75989b8e77082e97eda162edf72b47a..3584b2ce21c1b6219acf2321065ca4eba85efff0 100644
+index 5e7636ba4ff1dec83567c21ece380d593cf0fbf6..961b4e5348abe34a333f842defd00b707a8227bc 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 @@ -2223,6 +2223,7 @@ public class PurpurWorldConfig {
@@ -43,7 +43,7 @@ index 4aa38f92f75989b8e77082e97eda162edf72b47a..3584b2ce21c1b6219acf2321065ca4eb
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -2245,6 +2246,7 @@ public class PurpurWorldConfig {
+@@ -2243,6 +2244,7 @@ public class PurpurWorldConfig {
          villagerClericFarmersThrowWarts = getBoolean("mobs.villager.cleric-wart-farmers-throw-warts-at-villagers", villagerClericFarmersThrowWarts);
          villagerBypassMobGriefing = getBoolean("mobs.villager.bypass-mob-griefing", villagerBypassMobGriefing);
          villagerTakeDamageFromWater = getBoolean("mobs.villager.takes-damage-from-water", villagerTakeDamageFromWater);
@@ -51,7 +51,7 @@ index 4aa38f92f75989b8e77082e97eda162edf72b47a..3584b2ce21c1b6219acf2321065ca4eb
      }
  
      public boolean vindicatorRidable = false;
-@@ -2278,6 +2280,7 @@ public class PurpurWorldConfig {
+@@ -2276,6 +2278,7 @@ public class PurpurWorldConfig {
      public double wanderingTraderTemptRange = 10.0D;
      public boolean wanderingTraderCanBeLeashed = false;
      public boolean wanderingTraderTakeDamageFromWater = false;
@@ -59,8 +59,8 @@ index 4aa38f92f75989b8e77082e97eda162edf72b47a..3584b2ce21c1b6219acf2321065ca4eb
      private void wanderingTraderSettings() {
          wanderingTraderRidable = getBoolean("mobs.wandering_trader.ridable", wanderingTraderRidable);
          wanderingTraderRidableInWater = getBoolean("mobs.wandering_trader.ridable-in-water", wanderingTraderRidableInWater);
-@@ -2295,6 +2298,7 @@ public class PurpurWorldConfig {
-         }
+@@ -2291,6 +2294,7 @@ public class PurpurWorldConfig {
+         wanderingTraderTemptRange = getDouble("mobs.wandering_trader.attributes.tempt_range", wanderingTraderTemptRange);
          wanderingTraderCanBeLeashed = getBoolean("mobs.wandering_trader.can-be-leashed", wanderingTraderCanBeLeashed);
          wanderingTraderTakeDamageFromWater = getBoolean("mobs.wandering_trader.takes-damage-from-water", wanderingTraderTakeDamageFromWater);
 +        wanderingTraderAllowTrading = getBoolean("mobs.wandering_trader.allow-trading", wanderingTraderAllowTrading);
