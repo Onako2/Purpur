@@ -21,10 +21,10 @@ index 0bce10c1cbf9f1788817a2834ec0efa04dd17752..d2de324f024d0a83790e2b86dc765b01
              // CraftBukkit end
              this.dead = true;
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 6b8ef2126bc99855c3e3b59422d3368b2b2bdfa7..38acafae81a2db5169da413271c46077e8321855 100644
+index 3b4cc2e96c302373fde9f712f2250ac3a4dadb5c..9ec744a6935c34cfe1834a3d4e4f1b8a09e895e8 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -939,6 +939,7 @@ public class PurpurWorldConfig {
+@@ -950,6 +950,7 @@ public class PurpurWorldConfig {
      public boolean creeperBypassMobGriefing = false;
      public boolean creeperTakeDamageFromWater = false;
      public boolean creeperExplodeWhenKilled = false;
@@ -32,7 +32,7 @@ index 6b8ef2126bc99855c3e3b59422d3368b2b2bdfa7..38acafae81a2db5169da413271c46077
      private void creeperSettings() {
          creeperRidable = getBoolean("mobs.creeper.ridable", creeperRidable);
          creeperRidableInWater = getBoolean("mobs.creeper.ridable-in-water", creeperRidableInWater);
-@@ -955,6 +956,7 @@ public class PurpurWorldConfig {
+@@ -966,6 +967,7 @@ public class PurpurWorldConfig {
          creeperBypassMobGriefing = getBoolean("mobs.creeper.bypass-mob-griefing", creeperBypassMobGriefing);
          creeperTakeDamageFromWater = getBoolean("mobs.creeper.takes-damage-from-water", creeperTakeDamageFromWater);
          creeperExplodeWhenKilled = getBoolean("mobs.creeper.explode-when-killed", creeperExplodeWhenKilled);

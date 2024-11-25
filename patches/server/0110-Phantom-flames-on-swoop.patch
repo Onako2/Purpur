@@ -17,10 +17,10 @@ index 987b860f85a1be3159233fb3291773792d291348..39ae23d4942178ce95d4c06e676545aa
  
      @Override
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 57a5631a139251ae23592c10b082ab738f5cbb0b..7e32f0ec92b9309ca61a0c773d75b996768d3b74 100644
+index 8e6cc685b38141b2a0d07cf7b5cf1a86abf9a9c8..ec67dd1b7546c62edf4bf65fb7caefbf99004fa7 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1348,6 +1348,7 @@ public class PurpurWorldConfig {
+@@ -1359,6 +1359,7 @@ public class PurpurWorldConfig {
      public int phantomBurnInLight = 0;
      public boolean phantomIgnorePlayersWithTorch = false;
      public boolean phantomBurnInDaylight = true;
@@ -28,7 +28,7 @@ index 57a5631a139251ae23592c10b082ab738f5cbb0b..7e32f0ec92b9309ca61a0c773d75b996
      private void phantomSettings() {
          phantomRidable = getBoolean("mobs.phantom.ridable", phantomRidable);
          phantomRidableInWater = getBoolean("mobs.phantom.ridable-in-water", phantomRidableInWater);
-@@ -1381,6 +1382,7 @@ public class PurpurWorldConfig {
+@@ -1392,6 +1393,7 @@ public class PurpurWorldConfig {
          phantomBurnInLight = getInt("mobs.phantom.burn-in-light", phantomBurnInLight);
          phantomBurnInDaylight = getBoolean("mobs.phantom.burn-in-daylight", phantomBurnInDaylight);
          phantomIgnorePlayersWithTorch = getBoolean("mobs.phantom.ignore-players-with-torch", phantomIgnorePlayersWithTorch);

@@ -18,10 +18,10 @@ index 0faae8faeba4300a44b8dadedc73c9f1a4022e4f..f356110850dd71d066243ec29853f547
          }
  
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 7c5b7e7df07117d7e6c3a1fdba8d0576d17f338f..89cfedcbb45cd9a3ff9e795828bbc5ae8efa7d6d 100644
+index dd36c984ec46102d0ea67c590c181e0e86c4cd7e..06529d9b2a34e26db7ceab05589980bf6a364030 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -512,6 +512,7 @@ public class PurpurWorldConfig {
+@@ -523,6 +523,7 @@ public class PurpurWorldConfig {
      public boolean enderDragonControllable = true;
      public double enderDragonMaxY = 320D;
      public double enderDragonMaxHealth = 200.0D;
@@ -29,7 +29,7 @@ index 7c5b7e7df07117d7e6c3a1fdba8d0576d17f338f..89cfedcbb45cd9a3ff9e795828bbc5ae
      private void enderDragonSettings() {
          enderDragonRidable = getBoolean("mobs.ender_dragon.ridable", enderDragonRidable);
          enderDragonRidableInWater = getBoolean("mobs.ender_dragon.ridable-in-water", enderDragonRidableInWater);
-@@ -527,6 +528,7 @@ public class PurpurWorldConfig {
+@@ -538,6 +539,7 @@ public class PurpurWorldConfig {
              set("mobs.ender_dragon.attributes.max_health", oldValue);
          }
          enderDragonMaxHealth = getDouble("mobs.ender_dragon.attributes.max_health", enderDragonMaxHealth);

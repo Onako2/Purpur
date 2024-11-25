@@ -18,10 +18,10 @@ index 7298ba35cb27269e778de6b265933baed3077b36..623e8ef53d6336b3e3c83fd37eda1324
  
                  return InteractionResult.SUCCESS_SERVER;
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 753fdcd39fcb4696766070f8de2e414bd289cd95..0d94d2ed311b03cb13a5a4771c870dc1ee493357 100644
+index 2df30859c27e125b449f9c4fb513be5187a0307d..f12c14e4cbd56a563f90f25326ba8440eb755fd7 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -2948,6 +2948,8 @@ public class PurpurWorldConfig {
+@@ -2959,6 +2959,8 @@ public class PurpurWorldConfig {
      public double zombieVillagerJockeyChance = 0.05D;
      public boolean zombieVillagerJockeyTryExistingChickens = true;
      public boolean zombieVillagerTakeDamageFromWater = false;
@@ -30,7 +30,7 @@ index 753fdcd39fcb4696766070f8de2e414bd289cd95..0d94d2ed311b03cb13a5a4771c870dc1
      private void zombieVillagerSettings() {
          zombieVillagerRidable = getBoolean("mobs.zombie_villager.ridable", zombieVillagerRidable);
          zombieVillagerRidableInWater = getBoolean("mobs.zombie_villager.ridable-in-water", zombieVillagerRidableInWater);
-@@ -2964,6 +2966,8 @@ public class PurpurWorldConfig {
+@@ -2975,6 +2977,8 @@ public class PurpurWorldConfig {
          zombieVillagerJockeyChance = getDouble("mobs.zombie_villager.jockey.chance", zombieVillagerJockeyChance);
          zombieVillagerJockeyTryExistingChickens = getBoolean("mobs.zombie_villager.jockey.try-existing-chickens", zombieVillagerJockeyTryExistingChickens);
          zombieVillagerTakeDamageFromWater = getBoolean("mobs.zombie_villager.takes-damage-from-water", zombieVillagerTakeDamageFromWater);

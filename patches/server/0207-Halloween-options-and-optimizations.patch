@@ -64,10 +64,10 @@ index b34dec421adc3ce56c0720a839a43ce42faeefaf..98e7b57a45ae3cae704c65ec6db5f715
                  this.armorDropChances[EquipmentSlot.HEAD.getIndex()] = 0.0F;
              }
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 7e40f5790c243994d86cc8fdedc3ce7dcb94e24e..5226f3ad75ca94820c4b8de13b7cb8342268cbc9 100644
+index 5490bf3a4695101bd8f33b3927f8d7626922b59d..41f86171923d1a4e403e225d63ddf73fc3aa3a95 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1708,6 +1708,13 @@ public class PurpurWorldConfig {
+@@ -1719,6 +1719,13 @@ public class PurpurWorldConfig {
          guardianTakeDamageFromWater = getBoolean("mobs.guardian.takes-damage-from-water", guardianTakeDamageFromWater);
      }
  

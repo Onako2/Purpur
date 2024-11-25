@@ -71,10 +71,10 @@ index 48035556b0743f7641d77ec3a42c860f1e1ee6c3..642342592788226999efcb453542f55a
      }
  }
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index d23aba01ce2b109fd011130e2847107b26266b7f..0fe6b4e57a57388df51893f22c8e8cb1be633623 100644
+index 7ea16a8217aaab3864db2fc14388ec3cdc23ba65..1106fa732d8e0da9317969b6e6bdc60281997f2b 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -622,6 +622,10 @@ public class PurpurWorldConfig {
+@@ -633,6 +633,10 @@ public class PurpurWorldConfig {
      public double giantAttackDamage = 50.0D;
      public double giantMaxHealth = 100.0D;
      public double giantScale = 1.0D;
@@ -85,7 +85,7 @@ index d23aba01ce2b109fd011130e2847107b26266b7f..0fe6b4e57a57388df51893f22c8e8cb1
      private void giantSettings() {
          giantRidable = getBoolean("mobs.giant.ridable", giantRidable);
          giantRidableInWater = getBoolean("mobs.giant.ridable-in-water", giantRidableInWater);
-@@ -639,6 +643,10 @@ public class PurpurWorldConfig {
+@@ -650,6 +654,10 @@ public class PurpurWorldConfig {
          }
          giantMaxHealth = getDouble("mobs.giant.attributes.max_health", giantMaxHealth);
          giantScale = Mth.clamp(getDouble("mobs.giant.attributes.scale", giantScale), 0.0625D, 16.0D);

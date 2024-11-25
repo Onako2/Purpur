@@ -5,7 +5,7 @@ Subject: [PATCH] Configurable entity base attributes
 
 
 diff --git a/src/main/java/net/minecraft/world/entity/Entity.java b/src/main/java/net/minecraft/world/entity/Entity.java
-index 5263f97db83626096b1c4fef415a2fbf41bc9ce7..0360d3a4e7f291e3528a0debe4909e774e8c8b91 100644
+index 697c8c8fd0cdca4bb8bc3db62f7de8999785ec1e..90a51b05c80d079af07133a3e509aada57927a26 100644
 --- a/src/main/java/net/minecraft/world/entity/Entity.java
 +++ b/src/main/java/net/minecraft/world/entity/Entity.java
 @@ -177,7 +177,7 @@ import org.bukkit.plugin.PluginManager;
@@ -34,7 +34,7 @@ index 7c11b5e73d4f3c0be7c467f7522c2d974ab330f3..27aee968718af1ae78e2076ddc890114
      protected ParticleOptions getInkParticle() {
          return ParticleTypes.GLOW_SQUID_INK;
 diff --git a/src/main/java/net/minecraft/world/entity/LivingEntity.java b/src/main/java/net/minecraft/world/entity/LivingEntity.java
-index b8303404f8a81e2b446a9a40861787ca786aad47..5eb5976a0fbe1959f9015734cc0b31503604649d 100644
+index b027633d6c854f481fbd4a2e4b89ace4b9d7a398..f4cc9ff863079f5546cce1bfa0f1dcab022bb293 100644
 --- a/src/main/java/net/minecraft/world/entity/LivingEntity.java
 +++ b/src/main/java/net/minecraft/world/entity/LivingEntity.java
 @@ -326,6 +326,7 @@ public abstract class LivingEntity extends Entity implements Attackable {
@@ -214,7 +214,7 @@ index 9d82fec6f5969816095dbd5a11325c79002dbb61..500109364b4741fc310eb22c151754a1
  
      @Override
 diff --git a/src/main/java/net/minecraft/world/entity/animal/MushroomCow.java b/src/main/java/net/minecraft/world/entity/animal/MushroomCow.java
-index d554c62b89f382018c5be872077cccf1425c8e35..358f8d6650ed9820e7378d29f993b71504e779f3 100644
+index ba8d47111cf80c8e9a0b47793f125ca91f5f906e..0005cd7156e46ae790d629d7a985cdace1cc5577 100644
 --- a/src/main/java/net/minecraft/world/entity/animal/MushroomCow.java
 +++ b/src/main/java/net/minecraft/world/entity/animal/MushroomCow.java
 @@ -82,6 +82,11 @@ public class MushroomCow extends Cow implements Shearable, VariantHolder<Mushroo
@@ -377,7 +377,7 @@ index 18e5d9787590dbb2c78087326652558565a6b1f4..9ec3479b0db1f42493db127081e341fa
      public int getMaxSchoolSize() {
          return 5;
 diff --git a/src/main/java/net/minecraft/world/entity/animal/Sheep.java b/src/main/java/net/minecraft/world/entity/animal/Sheep.java
-index b5f559181f82a7afeb035ea3cbd539dd5aa4d1c8..bc975266fbf0348723dc04e29fd6bf8231b9cb87 100644
+index e19a0f7b805b6292c2b4c68981b3484645129dba..38799a817742b1bbaf921f1e24cf2fc44ab52050 100644
 --- a/src/main/java/net/minecraft/world/entity/animal/Sheep.java
 +++ b/src/main/java/net/minecraft/world/entity/animal/Sheep.java
 @@ -108,6 +108,12 @@ public class Sheep extends Animal implements Shearable {
@@ -461,7 +461,7 @@ index a9aae028195c0646d1692f55d2ebfe58747c37b6..500676a78aedc525aca989ccd0380cd2
          this.entityData.set(Turtle.HOME_POS, pos);
      }
 diff --git a/src/main/java/net/minecraft/world/entity/animal/Wolf.java b/src/main/java/net/minecraft/world/entity/animal/Wolf.java
-index 6eadd5064148a7b75a1946274c25ff90fa49096a..d082ca3ed17e8bbb27c1a971259720d43246b47f 100644
+index 04b6cb63bac767b386b8f67cf80a4d75df9d7fe5..40a766e20d1a2111d561cc05aa49e2ac50187d19 100644
 --- a/src/main/java/net/minecraft/world/entity/animal/Wolf.java
 +++ b/src/main/java/net/minecraft/world/entity/animal/Wolf.java
 @@ -146,6 +146,12 @@ public class Wolf extends TamableAnimal implements NeutralMob, VariantHolder<Hol
@@ -881,7 +881,7 @@ index 86c56940e0bbd3a9bfdd9d7617f27bbc4b0841f4..e719859160c35fcdffeff7c2a1d6aa2d
      protected void registerGoals() {
          this.goalSelector.addGoal(0, new org.purpurmc.purpur.entity.ai.HasRider(this)); // Purpur
 diff --git a/src/main/java/net/minecraft/world/entity/monster/Bogged.java b/src/main/java/net/minecraft/world/entity/monster/Bogged.java
-index 4e3d535d7c6facb5e5544545343973173ed90d45..52993da6868161105450491a81f5c32356fa17aa 100644
+index d96f6eb4fc881bf0cb2e7fdb46805f169297d923..ca63ab37bc6b5b4cb5abf2848dae476b5d937f2a 100644
 --- a/src/main/java/net/minecraft/world/entity/monster/Bogged.java
 +++ b/src/main/java/net/minecraft/world/entity/monster/Bogged.java
 @@ -59,6 +59,12 @@ public class Bogged extends AbstractSkeleton implements Shearable {
@@ -1635,10 +1635,10 @@ index f39a69294317e90c8198efc0680f451a8add7908..f741aca818bc983b034b3ac9864c1d71
      protected void registerGoals() {
          this.goalSelector.addGoal(0, new FloatGoal(this));
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 2e35e494134e5294fd67a0bf9abbe3f68d5faea5..65cbd35892ab48fccda9bccf2b4dd66be5c84a0d 100644
+index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc96cdbb21 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -105,125 +105,248 @@ public class PurpurWorldConfig {
+@@ -105,116 +105,230 @@ public class PurpurWorldConfig {
      public boolean allayRidable = false;
      public boolean allayRidableInWater = true;
      public boolean allayControllable = true;
@@ -1868,6 +1868,8 @@ index 2e35e494134e5294fd67a0bf9abbe3f68d5faea5..65cbd35892ab48fccda9bccf2b4dd66b
 +        cowScale = Mth.clamp(getDouble("mobs.cow.attributes.scale", cowScale), 0.0625D, 16.0D);
      }
  
+     public boolean creakingRidable = false;
+@@ -231,10 +345,19 @@ public class PurpurWorldConfig {
      public boolean creeperRidable = false;
      public boolean creeperRidableInWater = true;
      public boolean creeperControllable = true;
@@ -1887,7 +1889,7 @@ index 2e35e494134e5294fd67a0bf9abbe3f68d5faea5..65cbd35892ab48fccda9bccf2b4dd66b
      }
  
      public boolean dolphinRidable = false;
-@@ -231,80 +354,175 @@ public class PurpurWorldConfig {
+@@ -242,80 +365,175 @@ public class PurpurWorldConfig {
      public int dolphinSpitCooldown = 20;
      public float dolphinSpitSpeed = 1.0F;
      public float dolphinSpitDamage = 2.0F;
@@ -2063,7 +2065,7 @@ index 2e35e494134e5294fd67a0bf9abbe3f68d5faea5..65cbd35892ab48fccda9bccf2b4dd66b
      }
  
      public boolean frogRidable = false;
-@@ -322,147 +540,342 @@ public class PurpurWorldConfig {
+@@ -333,147 +551,342 @@ public class PurpurWorldConfig {
      public boolean ghastRidableInWater = true;
      public boolean ghastControllable = true;
      public double ghastMaxY = 320D;
@@ -2406,7 +2408,7 @@ index 2e35e494134e5294fd67a0bf9abbe3f68d5faea5..65cbd35892ab48fccda9bccf2b4dd66b
      }
  
      public boolean phantomRidable = false;
-@@ -472,6 +885,10 @@ public class PurpurWorldConfig {
+@@ -483,6 +896,10 @@ public class PurpurWorldConfig {
      public float phantomFlameDamage = 1.0F;
      public int phantomFlameFireTime = 8;
      public boolean phantomAllowGriefing = false;
@@ -2417,7 +2419,7 @@ index 2e35e494134e5294fd67a0bf9abbe3f68d5faea5..65cbd35892ab48fccda9bccf2b4dd66b
      private void phantomSettings() {
          phantomRidable = getBoolean("mobs.phantom.ridable", phantomRidable);
          phantomRidableInWater = getBoolean("mobs.phantom.ridable-in-water", phantomRidableInWater);
-@@ -480,191 +897,405 @@ public class PurpurWorldConfig {
+@@ -491,191 +908,405 @@ public class PurpurWorldConfig {
          phantomFlameDamage = (float) getDouble("mobs.phantom.flames.damage", phantomFlameDamage);
          phantomFlameFireTime = getInt("mobs.phantom.flames.fire-time", phantomFlameFireTime);
          phantomAllowGriefing = getBoolean("mobs.phantom.allow-griefing", phantomAllowGriefing);
@@ -2823,7 +2825,7 @@ index 2e35e494134e5294fd67a0bf9abbe3f68d5faea5..65cbd35892ab48fccda9bccf2b4dd66b
      }
  
      public boolean tadpoleRidable = false;
-@@ -679,64 +1310,137 @@ public class PurpurWorldConfig {
+@@ -690,64 +1321,137 @@ public class PurpurWorldConfig {
      public boolean traderLlamaRidable = false;
      public boolean traderLlamaRidableInWater = false;
      public boolean traderLlamaControllable = true;
@@ -2961,7 +2963,7 @@ index 2e35e494134e5294fd67a0bf9abbe3f68d5faea5..65cbd35892ab48fccda9bccf2b4dd66b
      }
  
      public boolean wardenRidable = false;
-@@ -751,83 +1455,183 @@ public class PurpurWorldConfig {
+@@ -762,83 +1466,183 @@ public class PurpurWorldConfig {
      public boolean witchRidable = false;
      public boolean witchRidableInWater = true;
      public boolean witchControllable = true;
