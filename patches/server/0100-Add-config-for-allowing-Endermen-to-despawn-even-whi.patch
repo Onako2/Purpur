@@ -21,10 +21,10 @@ index 8933b1f16617f0373cc99f93254533cc7d1e923f..02336ee7a002a620cd76570c84d1d531
  
      private static class EndermanFreezeWhenLookedAt extends Goal {
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 22471a2f7a0ab8d820cf1eb074465210f979d9bf..9c2f4194320b0f57a00ed39a179564223ad0590d 100644
+index 17367f567bdfa9fc11ebc47ec2dbb9110c6c8fd5..82cbe2d638d027a8a7ac20a182d4da868e158921 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -860,6 +860,7 @@ public class PurpurWorldConfig {
+@@ -864,6 +864,7 @@ public class PurpurWorldConfig {
      public double endermanMaxHealth = 40.0D;
      public double endermanScale = 1.0D;
      public boolean endermanAllowGriefing = true;
@@ -32,7 +32,7 @@ index 22471a2f7a0ab8d820cf1eb074465210f979d9bf..9c2f4194320b0f57a00ed39a17956422
      private void endermanSettings() {
          endermanRidable = getBoolean("mobs.enderman.ridable", endermanRidable);
          endermanRidableInWater = getBoolean("mobs.enderman.ridable-in-water", endermanRidableInWater);
-@@ -872,6 +873,7 @@ public class PurpurWorldConfig {
+@@ -876,6 +877,7 @@ public class PurpurWorldConfig {
          endermanMaxHealth = getDouble("mobs.enderman.attributes.max_health", endermanMaxHealth);
          endermanScale = Mth.clamp(getDouble("mobs.enderman.attributes.scale", endermanScale), 0.0625D, 16.0D);
          endermanAllowGriefing = getBoolean("mobs.enderman.allow-griefing", endermanAllowGriefing);

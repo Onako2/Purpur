@@ -30,10 +30,10 @@ index 32339a18345feddb49cffe5ed1f18a2bfaf931ba..a0ff876d951f62eb172ee3763a9bc7ba
                          entityhorseskeleton.setPos((double) blockposition.getX(), (double) blockposition.getY(), (double) blockposition.getZ());
                          this.addFreshEntity(entityhorseskeleton, org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason.LIGHTNING); // CraftBukkit
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 1106fa732d8e0da9317969b6e6bdc60281997f2b..146c0c5926f5cf5c849afdd4640b8b7fb1f6e154 100644
+index cd88fcc08a1580bfb817fb6d6412ba78db274253..79cb86a9a7c8fc92e8e0839aeb73714934e3599f 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1655,6 +1655,7 @@ public class PurpurWorldConfig {
+@@ -1659,6 +1659,7 @@ public class PurpurWorldConfig {
      public double zombieHorseJumpStrengthMax = 1.0D;
      public double zombieHorseMovementSpeedMin = 0.2D;
      public double zombieHorseMovementSpeedMax = 0.2D;
@@ -41,7 +41,7 @@ index 1106fa732d8e0da9317969b6e6bdc60281997f2b..146c0c5926f5cf5c849afdd4640b8b7f
      private void zombieHorseSettings() {
          zombieHorseRidable = getBoolean("mobs.zombie_horse.ridable", zombieHorseRidable);
          zombieHorseRidableInWater = getBoolean("mobs.zombie_horse.ridable-in-water", zombieHorseRidableInWater);
-@@ -1671,6 +1672,7 @@ public class PurpurWorldConfig {
+@@ -1675,6 +1676,7 @@ public class PurpurWorldConfig {
          zombieHorseJumpStrengthMax = getDouble("mobs.zombie_horse.attributes.jump_strength.max", zombieHorseJumpStrengthMax);
          zombieHorseMovementSpeedMin = getDouble("mobs.zombie_horse.attributes.movement_speed.min", zombieHorseMovementSpeedMin);
          zombieHorseMovementSpeedMax = getDouble("mobs.zombie_horse.attributes.movement_speed.max", zombieHorseMovementSpeedMax);

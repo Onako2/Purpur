@@ -17,10 +17,10 @@ index a5a23c7f733d49c20c870f819eec2607781dccbf..be74a5732bc24eb3c909d28b4ef46d51
          }
  
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 1ea9148ecb4db736311f304e1eedb2f62dab9f5d..57c1aaf47906ef4a6c7824a5d80af8bd41f455ec 100644
+index 1afc8d742fd5fee71744f4d0135e89d4bf49e993..5b9cdcba86df045ef67b494e8784c67b5f4133a0 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -667,6 +667,7 @@ public class PurpurWorldConfig {
+@@ -671,6 +671,7 @@ public class PurpurWorldConfig {
      public float dolphinSpitDamage = 2.0F;
      public double dolphinMaxHealth = 10.0D;
      public double dolphinScale = 1.0D;
@@ -28,7 +28,7 @@ index 1ea9148ecb4db736311f304e1eedb2f62dab9f5d..57c1aaf47906ef4a6c7824a5d80af8bd
      private void dolphinSettings() {
          dolphinRidable = getBoolean("mobs.dolphin.ridable", dolphinRidable);
          dolphinControllable = getBoolean("mobs.dolphin.controllable", dolphinControllable);
-@@ -680,6 +681,7 @@ public class PurpurWorldConfig {
+@@ -684,6 +685,7 @@ public class PurpurWorldConfig {
          }
          dolphinMaxHealth = getDouble("mobs.dolphin.attributes.max_health", dolphinMaxHealth);
          dolphinScale = Mth.clamp(getDouble("mobs.dolphin.attributes.scale", dolphinScale), 0.0625D, 16.0D);

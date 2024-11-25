@@ -22,10 +22,10 @@ index 1aba4ebc1ea3d6782098f2c9aebfb38363e7ab95..cda6cb5b10b895bab48d2212f259ba4c
      }
  
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 93781c1c96f33b34606ccc8babb1ac59f7625c07..2162d2ec698fd18ad810dbcf2f281c3ce5381962 100644
+index 30be8254da415010afa8998b7fea7868d936cb8c..e188d9584e6b087ca31b5f3d60fe2c19a6d365f0 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -2172,6 +2172,8 @@ public class PurpurWorldConfig {
+@@ -2176,6 +2176,8 @@ public class PurpurWorldConfig {
      public boolean phantomFlamesOnSwoop = false;
      public boolean phantomTakeDamageFromWater = false;
      public boolean phantomAlwaysDropExp = false;
@@ -34,7 +34,7 @@ index 93781c1c96f33b34606ccc8babb1ac59f7625c07..2162d2ec698fd18ad810dbcf2f281c3c
      private void phantomSettings() {
          phantomRidable = getBoolean("mobs.phantom.ridable", phantomRidable);
          phantomRidableInWater = getBoolean("mobs.phantom.ridable-in-water", phantomRidableInWater);
-@@ -2208,6 +2210,13 @@ public class PurpurWorldConfig {
+@@ -2212,6 +2214,13 @@ public class PurpurWorldConfig {
          phantomFlamesOnSwoop = getBoolean("mobs.phantom.flames-on-swoop", phantomFlamesOnSwoop);
          phantomTakeDamageFromWater = getBoolean("mobs.phantom.takes-damage-from-water", phantomTakeDamageFromWater);
          phantomAlwaysDropExp = getBoolean("mobs.phantom.always-drop-exp", phantomAlwaysDropExp);

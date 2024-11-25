@@ -1550,6 +1550,25 @@ index aa4160892b9ba2486806b5a54bc1465a4e273370..ba1ce7e0ed888bd47312e9d7da5426f5
      }
  
      @Nullable
+diff --git a/src/main/java/net/minecraft/world/entity/monster/creaking/Creaking.java b/src/main/java/net/minecraft/world/entity/monster/creaking/Creaking.java
+index f935d475fd1aca407bde420e9ba8002002ea55f6..9bf251915c8a126ba480f44ea203f1a48e1ecde3 100644
+--- a/src/main/java/net/minecraft/world/entity/monster/creaking/Creaking.java
++++ b/src/main/java/net/minecraft/world/entity/monster/creaking/Creaking.java
+@@ -208,6 +208,14 @@ public class Creaking extends Monster {
+         return this.isActive() ? null : SoundEvents.CREAKING_AMBIENT;
+     }
+ 
++    // Purpur start
++    @Override
++    public void initAttributes() {
++        this.getAttribute(Attributes.MAX_HEALTH).setBaseValue(this.level().purpurConfig.creakingMaxHealth);
++        this.getAttribute(Attributes.SCALE).setBaseValue(this.level().purpurConfig.creakingScale);
++    }
++    // Purpur end
++
+     @Override
+     protected SoundEvent getHurtSound(DamageSource source) {
+         return SoundEvents.CREAKING_SWAY;
 diff --git a/src/main/java/net/minecraft/world/entity/monster/hoglin/Hoglin.java b/src/main/java/net/minecraft/world/entity/monster/hoglin/Hoglin.java
 index b92c65703dfc4ed95de97534b1e8195c627aa212..08c4a32b1195820eb574cdf4a499107565a551d6 100644
 --- a/src/main/java/net/minecraft/world/entity/monster/hoglin/Hoglin.java
@@ -1635,10 +1654,10 @@ index f39a69294317e90c8198efc0680f451a8add7908..f741aca818bc983b034b3ac9864c1d71
      protected void registerGoals() {
          this.goalSelector.addGoal(0, new FloatGoal(this));
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc96cdbb21 100644
+index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba2a43f91f 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -105,116 +105,230 @@ public class PurpurWorldConfig {
+@@ -105,136 +105,263 @@ public class PurpurWorldConfig {
      public boolean allayRidable = false;
      public boolean allayRidableInWater = true;
      public boolean allayControllable = true;
@@ -1869,7 +1888,20 @@ index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc
      }
  
      public boolean creakingRidable = false;
-@@ -231,10 +345,19 @@ public class PurpurWorldConfig {
+     public boolean creakingRidableInWater = true;
+     public boolean creakingControllable = true;
++    public double creakingMaxHealth = 1.0D;
++    public double creakingScale = 1.0D;
+     private void creakingSettings() {
+         if (net.minecraft.server.MinecraftServer.getServer().getWorldData().enabledFeatures().contains(net.minecraft.world.flag.FeatureFlags.WINTER_DROP)) { // TODO: Remove check when 1.21.4 Purpur releases
+             creakingRidable = getBoolean("mobs.creaking.ridable", creakingRidable);
+             creakingRidableInWater = getBoolean("mobs.creaking.ridable-in-water", creakingRidableInWater);
+             creakingControllable = getBoolean("mobs.creaking.controllable", creakingControllable);
++            creakingMaxHealth = getDouble("mobs.creaking.attributes.max_health", creakingMaxHealth);
++            creakingScale = Mth.clamp(getDouble("mobs.creaking.attributes.scale", creakingScale), 0.0625D, 16.0D);
+         }
+     }
+ 
      public boolean creeperRidable = false;
      public boolean creeperRidableInWater = true;
      public boolean creeperControllable = true;
@@ -1889,7 +1921,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc
      }
  
      public boolean dolphinRidable = false;
-@@ -242,80 +365,175 @@ public class PurpurWorldConfig {
+@@ -242,80 +369,175 @@ public class PurpurWorldConfig {
      public int dolphinSpitCooldown = 20;
      public float dolphinSpitSpeed = 1.0F;
      public float dolphinSpitDamage = 2.0F;
@@ -2065,7 +2097,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc
      }
  
      public boolean frogRidable = false;
-@@ -333,147 +551,342 @@ public class PurpurWorldConfig {
+@@ -333,147 +555,342 @@ public class PurpurWorldConfig {
      public boolean ghastRidableInWater = true;
      public boolean ghastControllable = true;
      public double ghastMaxY = 320D;
@@ -2408,7 +2440,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc
      }
  
      public boolean phantomRidable = false;
-@@ -483,6 +896,10 @@ public class PurpurWorldConfig {
+@@ -483,6 +900,10 @@ public class PurpurWorldConfig {
      public float phantomFlameDamage = 1.0F;
      public int phantomFlameFireTime = 8;
      public boolean phantomAllowGriefing = false;
@@ -2419,7 +2451,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc
      private void phantomSettings() {
          phantomRidable = getBoolean("mobs.phantom.ridable", phantomRidable);
          phantomRidableInWater = getBoolean("mobs.phantom.ridable-in-water", phantomRidableInWater);
-@@ -491,191 +908,405 @@ public class PurpurWorldConfig {
+@@ -491,191 +912,405 @@ public class PurpurWorldConfig {
          phantomFlameDamage = (float) getDouble("mobs.phantom.flames.damage", phantomFlameDamage);
          phantomFlameFireTime = getInt("mobs.phantom.flames.fire-time", phantomFlameFireTime);
          phantomAllowGriefing = getBoolean("mobs.phantom.allow-griefing", phantomAllowGriefing);
@@ -2825,7 +2857,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc
      }
  
      public boolean tadpoleRidable = false;
-@@ -690,64 +1321,137 @@ public class PurpurWorldConfig {
+@@ -690,64 +1325,137 @@ public class PurpurWorldConfig {
      public boolean traderLlamaRidable = false;
      public boolean traderLlamaRidableInWater = false;
      public boolean traderLlamaControllable = true;
@@ -2963,7 +2995,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..9d4a0e9052e18a54ba523a9fb24b70fc
      }
  
      public boolean wardenRidable = false;
-@@ -762,83 +1466,183 @@ public class PurpurWorldConfig {
+@@ -762,83 +1470,183 @@ public class PurpurWorldConfig {
      public boolean witchRidable = false;
      public boolean witchRidableInWater = true;
      public boolean witchControllable = true;

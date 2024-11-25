@@ -100,10 +100,10 @@ index f741aca818bc983b034b3ac9864c1d71c714f9b4..a821a7bc7de7458ceb8afdb61bde32f7
          this.goalSelector.addGoal(8, new WaterAvoidingRandomStrollGoal(this, 0.35D));
          this.goalSelector.addGoal(9, new InteractGoal(this, Player.class, 3.0F, 1.0F));
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 9bb9d8ee5811f09d2e4ade350691752212d79ac6..494a428a67a36218ab166d6a2119b99c1270d818 100644
+index 3bc9da1c5a7c60dcce17e38eccf909c8e2d35544..5c736acc00c9ac0a516fe2b88bc216c12a3acada 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1586,6 +1586,8 @@ public class PurpurWorldConfig {
+@@ -1590,6 +1590,8 @@ public class PurpurWorldConfig {
      public boolean villagerControllable = true;
      public double villagerMaxHealth = 20.0D;
      public double villagerScale = 1.0D;
@@ -112,7 +112,7 @@ index 9bb9d8ee5811f09d2e4ade350691752212d79ac6..494a428a67a36218ab166d6a2119b99c
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -1597,6 +1599,8 @@ public class PurpurWorldConfig {
+@@ -1601,6 +1603,8 @@ public class PurpurWorldConfig {
          }
          villagerMaxHealth = getDouble("mobs.villager.attributes.max_health", villagerMaxHealth);
          villagerScale = Mth.clamp(getDouble("mobs.villager.attributes.scale", villagerScale), 0.0625D, 16.0D);
@@ -121,7 +121,7 @@ index 9bb9d8ee5811f09d2e4ade350691752212d79ac6..494a428a67a36218ab166d6a2119b99c
      }
  
      public boolean vindicatorRidable = false;
-@@ -1622,6 +1626,8 @@ public class PurpurWorldConfig {
+@@ -1626,6 +1630,8 @@ public class PurpurWorldConfig {
      public boolean wanderingTraderControllable = true;
      public double wanderingTraderMaxHealth = 20.0D;
      public double wanderingTraderScale = 1.0D;
@@ -130,7 +130,7 @@ index 9bb9d8ee5811f09d2e4ade350691752212d79ac6..494a428a67a36218ab166d6a2119b99c
      private void wanderingTraderSettings() {
          wanderingTraderRidable = getBoolean("mobs.wandering_trader.ridable", wanderingTraderRidable);
          wanderingTraderRidableInWater = getBoolean("mobs.wandering_trader.ridable-in-water", wanderingTraderRidableInWater);
-@@ -1633,6 +1639,8 @@ public class PurpurWorldConfig {
+@@ -1637,6 +1643,8 @@ public class PurpurWorldConfig {
          }
          wanderingTraderMaxHealth = getDouble("mobs.wandering_trader.attributes.max_health", wanderingTraderMaxHealth);
          wanderingTraderScale = Mth.clamp(getDouble("mobs.wandering_trader.attributes.scale", wanderingTraderScale), 0.0625D, 16.0D);

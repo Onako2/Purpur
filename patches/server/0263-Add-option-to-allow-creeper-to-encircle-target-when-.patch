@@ -24,10 +24,10 @@ index 137ec75ee803789deb7b1ca93dd9369c9af362b9..ca95d25af3e9a0536868b0c7fd8e7d2f
      }
  }
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 02a80796f700e56c9e51150daae5a163aef0a174..2f2d134ca1a83c5dd802907c56ab6971bab91a97 100644
+index e90bff9a4e77a9256fe339a6d132a1f90ddac8cc..d7748898d20d66cf6ceb8df5b7ae29f89d63cb56 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1437,6 +1437,7 @@ public class PurpurWorldConfig {
+@@ -1441,6 +1441,7 @@ public class PurpurWorldConfig {
      public boolean creeperHealthRadius = false;
      public boolean creeperAlwaysDropExp = false;
      public double creeperHeadVisibilityPercent = 0.5D;
@@ -35,7 +35,7 @@ index 02a80796f700e56c9e51150daae5a163aef0a174..2f2d134ca1a83c5dd802907c56ab6971
      private void creeperSettings() {
          creeperRidable = getBoolean("mobs.creeper.ridable", creeperRidable);
          creeperRidableInWater = getBoolean("mobs.creeper.ridable-in-water", creeperRidableInWater);
-@@ -1456,6 +1457,7 @@ public class PurpurWorldConfig {
+@@ -1460,6 +1461,7 @@ public class PurpurWorldConfig {
          creeperHealthRadius = getBoolean("mobs.creeper.health-impacts-explosion", creeperHealthRadius);
          creeperAlwaysDropExp = getBoolean("mobs.creeper.always-drop-exp", creeperAlwaysDropExp);
          creeperHeadVisibilityPercent = getDouble("mobs.creeper.head-visibility-percent", creeperHeadVisibilityPercent);

@@ -20,10 +20,10 @@ index 7eb57c02515045dbc569c6b1da412c9fb398bd28..6f3ccd2d437bacf7a7e828b62b51533e
          event.setCancelled(!shouldAttack);
          return event.callEvent();
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index c397e7391b15054b4a5e1cc99a0b082036c00fc9..34a0b3b4cb6a29f97a968d852ae9075b8a5e5e82 100644
+index 300b7a98262ee366d2321245d26604b53d5e6f56..09bacab4f9b6457d802ef13f3fbcfd05a592bfde 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1030,6 +1030,7 @@ public class PurpurWorldConfig {
+@@ -1034,6 +1034,7 @@ public class PurpurWorldConfig {
      public boolean endermanTakeDamageFromWater = true;
      public boolean endermanAggroEndermites = true;
      public boolean endermanAggroEndermitesOnlyIfPlayerSpawned = false;
@@ -31,7 +31,7 @@ index c397e7391b15054b4a5e1cc99a0b082036c00fc9..34a0b3b4cb6a29f97a968d852ae9075b
      private void endermanSettings() {
          endermanRidable = getBoolean("mobs.enderman.ridable", endermanRidable);
          endermanRidableInWater = getBoolean("mobs.enderman.ridable-in-water", endermanRidableInWater);
-@@ -1051,6 +1052,7 @@ public class PurpurWorldConfig {
+@@ -1055,6 +1056,7 @@ public class PurpurWorldConfig {
          endermanTakeDamageFromWater = getBoolean("mobs.enderman.takes-damage-from-water", endermanTakeDamageFromWater);
          endermanAggroEndermites = getBoolean("mobs.enderman.aggressive-towards-endermites", endermanAggroEndermites);
          endermanAggroEndermitesOnlyIfPlayerSpawned = getBoolean("mobs.enderman.aggressive-towards-endermites-only-spawned-by-player-thrown-ender-pearls", endermanAggroEndermitesOnlyIfPlayerSpawned);

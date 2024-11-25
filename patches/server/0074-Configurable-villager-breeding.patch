@@ -18,10 +18,10 @@ index 329db0049e0792b2c066349849ebd7c26a9178d7..c50cfa8225d5098f978da42cdf6c6860
  
      private boolean hungry() {
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 6c5e85170b9e102da262210145846bfd35627d27..5dd8b4aff2ccd5d43a5be76df4d0c38996e9e612 100644
+index 8543f5fee97656139187e843725932816cf5e811..72e46a314018ba997f34b75c1f31c16e1690d634 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1757,6 +1757,7 @@ public class PurpurWorldConfig {
+@@ -1761,6 +1761,7 @@ public class PurpurWorldConfig {
      public boolean villagerFollowEmeraldBlock = false;
      public double villagerTemptRange = 10.0D;
      public boolean villagerCanBeLeashed = false;
@@ -29,7 +29,7 @@ index 6c5e85170b9e102da262210145846bfd35627d27..5dd8b4aff2ccd5d43a5be76df4d0c389
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -1771,6 +1772,7 @@ public class PurpurWorldConfig {
+@@ -1775,6 +1776,7 @@ public class PurpurWorldConfig {
          villagerFollowEmeraldBlock = getBoolean("mobs.villager.follow-emerald-blocks", villagerFollowEmeraldBlock);
          villagerTemptRange = getDouble("mobs.villager.attributes.tempt_range", villagerTemptRange);
          villagerCanBeLeashed = getBoolean("mobs.villager.can-be-leashed", villagerCanBeLeashed);

@@ -31,10 +31,10 @@ index c00b13482ce3f603f1d85b9a5ad36b768de5a9f8..10e747edebd6463cdfcea592cec1c232
                  pos = pos.below();
              }
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 1e9da8d1033b2173d2b9c54e532a423ec4398542..4f8d94f3cf51bef47eec885bc016f37d28c89c04 100644
+index f18d047e196404a41104987943472430ee195a3b..4dc8142a6023170c5c599f564f2d1b7db81572f4 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1711,6 +1711,7 @@ public class PurpurWorldConfig {
+@@ -1715,6 +1715,7 @@ public class PurpurWorldConfig {
      public double piglinScale = 1.0D;
      public boolean piglinBypassMobGriefing = false;
      public boolean piglinTakeDamageFromWater = false;
@@ -42,7 +42,7 @@ index 1e9da8d1033b2173d2b9c54e532a423ec4398542..4f8d94f3cf51bef47eec885bc016f37d
      private void piglinSettings() {
          piglinRidable = getBoolean("mobs.piglin.ridable", piglinRidable);
          piglinRidableInWater = getBoolean("mobs.piglin.ridable-in-water", piglinRidableInWater);
-@@ -1724,6 +1725,7 @@ public class PurpurWorldConfig {
+@@ -1728,6 +1729,7 @@ public class PurpurWorldConfig {
          piglinScale = Mth.clamp(getDouble("mobs.piglin.attributes.scale", piglinScale), 0.0625D, 16.0D);
          piglinBypassMobGriefing = getBoolean("mobs.piglin.bypass-mob-griefing", piglinBypassMobGriefing);
          piglinTakeDamageFromWater = getBoolean("mobs.piglin.takes-damage-from-water", piglinTakeDamageFromWater);

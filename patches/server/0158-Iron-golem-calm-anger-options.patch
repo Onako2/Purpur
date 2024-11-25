@@ -25,10 +25,10 @@ index 6396d31a14815fbe4f9f51dc610af317566bf522..db8420f6d1356d400699bd09e67e5805
              }
          }
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 9ec744a6935c34cfe1834a3d4e4f1b8a09e895e8..65fee5d017f5359c66c34c155fc6de5f7b6888e2 100644
+index 526d979e50803eb94867702340aa8a5af9da4588..401d11500f467073eee2162b21327fa2bf3fd0a2 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1438,6 +1438,8 @@ public class PurpurWorldConfig {
+@@ -1442,6 +1442,8 @@ public class PurpurWorldConfig {
      public double ironGolemMaxHealth = 100.0D;
      public double ironGolemScale = 1.0D;
      public boolean ironGolemTakeDamageFromWater = false;
@@ -37,7 +37,7 @@ index 9ec744a6935c34cfe1834a3d4e4f1b8a09e895e8..65fee5d017f5359c66c34c155fc6de5f
      private void ironGolemSettings() {
          ironGolemRidable = getBoolean("mobs.iron_golem.ridable", ironGolemRidable);
          ironGolemRidableInWater = getBoolean("mobs.iron_golem.ridable-in-water", ironGolemRidableInWater);
-@@ -1451,6 +1453,8 @@ public class PurpurWorldConfig {
+@@ -1455,6 +1457,8 @@ public class PurpurWorldConfig {
          ironGolemMaxHealth = getDouble("mobs.iron_golem.attributes.max_health", ironGolemMaxHealth);
          ironGolemScale = Mth.clamp(getDouble("mobs.iron_golem.attributes.scale", ironGolemScale), 0.0625D, 16.0D);
          ironGolemTakeDamageFromWater = getBoolean("mobs.iron_golem.takes-damage-from-water", ironGolemTakeDamageFromWater);

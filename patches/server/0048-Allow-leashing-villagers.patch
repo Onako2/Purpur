@@ -49,10 +49,10 @@ index a821a7bc7de7458ceb8afdb61bde32f74534f012..738df68a988a8ba428bf2c74a12cb8d9
  
      @Override
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 494a428a67a36218ab166d6a2119b99c1270d818..5ec0b35fc1e389a62de3b8ca28bb7e03d99a622a 100644
+index 5c736acc00c9ac0a516fe2b88bc216c12a3acada..9b1de87b3602aaf4a513a6af99cbb1db0ae16c1c 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1588,6 +1588,7 @@ public class PurpurWorldConfig {
+@@ -1592,6 +1592,7 @@ public class PurpurWorldConfig {
      public double villagerScale = 1.0D;
      public boolean villagerFollowEmeraldBlock = false;
      public double villagerTemptRange = 10.0D;
@@ -60,7 +60,7 @@ index 494a428a67a36218ab166d6a2119b99c1270d818..5ec0b35fc1e389a62de3b8ca28bb7e03
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -1601,6 +1602,7 @@ public class PurpurWorldConfig {
+@@ -1605,6 +1606,7 @@ public class PurpurWorldConfig {
          villagerScale = Mth.clamp(getDouble("mobs.villager.attributes.scale", villagerScale), 0.0625D, 16.0D);
          villagerFollowEmeraldBlock = getBoolean("mobs.villager.follow-emerald-blocks", villagerFollowEmeraldBlock);
          villagerTemptRange = getDouble("mobs.villager.attributes.tempt_range", villagerTemptRange);
@@ -68,7 +68,7 @@ index 494a428a67a36218ab166d6a2119b99c1270d818..5ec0b35fc1e389a62de3b8ca28bb7e03
      }
  
      public boolean vindicatorRidable = false;
-@@ -1628,6 +1630,7 @@ public class PurpurWorldConfig {
+@@ -1632,6 +1634,7 @@ public class PurpurWorldConfig {
      public double wanderingTraderScale = 1.0D;
      public boolean wanderingTraderFollowEmeraldBlock = false;
      public double wanderingTraderTemptRange = 10.0D;
@@ -76,7 +76,7 @@ index 494a428a67a36218ab166d6a2119b99c1270d818..5ec0b35fc1e389a62de3b8ca28bb7e03
      private void wanderingTraderSettings() {
          wanderingTraderRidable = getBoolean("mobs.wandering_trader.ridable", wanderingTraderRidable);
          wanderingTraderRidableInWater = getBoolean("mobs.wandering_trader.ridable-in-water", wanderingTraderRidableInWater);
-@@ -1641,6 +1644,7 @@ public class PurpurWorldConfig {
+@@ -1645,6 +1648,7 @@ public class PurpurWorldConfig {
          wanderingTraderScale = Mth.clamp(getDouble("mobs.wandering_trader.attributes.scale", wanderingTraderScale), 0.0625D, 16.0D);
          wanderingTraderFollowEmeraldBlock = getBoolean("mobs.wandering_trader.follow-emerald-blocks", wanderingTraderFollowEmeraldBlock);
          wanderingTraderTemptRange = getDouble("mobs.wandering_trader.attributes.tempt_range", wanderingTraderTemptRange);

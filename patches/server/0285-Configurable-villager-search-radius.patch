@@ -31,10 +31,10 @@ index 92731b6b593289e9f583c9b705b219e81fcd8e73..9104d7010bda6f9f73b478c11490ef9c
              // Paper end - optimise POI access
              if (path != null && path.canReach()) {
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 08e6c2eecfe393383bef127699e6aff556838042..f314463ea20e4a23d25135861a5a179c13675a97 100644
+index 68eba2d67b8f8b6d6819cd07e43be32cef23893a..9c1ac7e766f2072ce293ab0aa7ad32d14845ba04 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -3002,6 +3002,8 @@ public class PurpurWorldConfig {
+@@ -3006,6 +3006,8 @@ public class PurpurWorldConfig {
      public boolean villagerDisplayTradeItem = true;
      public int villagerSpawnIronGolemRadius = 0;
      public int villagerSpawnIronGolemLimit = 0;
@@ -43,7 +43,7 @@ index 08e6c2eecfe393383bef127699e6aff556838042..f314463ea20e4a23d25135861a5a179c
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -3040,6 +3042,8 @@ public class PurpurWorldConfig {
+@@ -3044,6 +3046,8 @@ public class PurpurWorldConfig {
          villagerDisplayTradeItem = getBoolean("mobs.villager.display-trade-item", villagerDisplayTradeItem);
          villagerSpawnIronGolemRadius = getInt("mobs.villager.spawn-iron-golem.radius", villagerSpawnIronGolemRadius);
          villagerSpawnIronGolemLimit = getInt("mobs.villager.spawn-iron-golem.limit", villagerSpawnIronGolemLimit);
