@@ -1654,10 +1654,10 @@ index f39a69294317e90c8198efc0680f451a8add7908..f741aca818bc983b034b3ac9864c1d71
      protected void registerGoals() {
          this.goalSelector.addGoal(0, new FloatGoal(this));
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba2a43f91f 100644
+index 5004e86747306cc8d4bbed6f10d3a6e9047cb5f4..ee9bcb7d011f20575cbbbe2e0ded1e53087aba7a 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -105,136 +105,263 @@ public class PurpurWorldConfig {
+@@ -105,134 +105,261 @@ public class PurpurWorldConfig {
      public boolean allayRidable = false;
      public boolean allayRidableInWater = true;
      public boolean allayControllable = true;
@@ -1893,13 +1893,11 @@ index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba
 +    public double creakingMaxHealth = 1.0D;
 +    public double creakingScale = 1.0D;
      private void creakingSettings() {
-         if (net.minecraft.server.MinecraftServer.getServer().getWorldData().enabledFeatures().contains(net.minecraft.world.flag.FeatureFlags.WINTER_DROP)) { // TODO: Remove check when 1.21.4 Purpur releases
-             creakingRidable = getBoolean("mobs.creaking.ridable", creakingRidable);
-             creakingRidableInWater = getBoolean("mobs.creaking.ridable-in-water", creakingRidableInWater);
-             creakingControllable = getBoolean("mobs.creaking.controllable", creakingControllable);
-+            creakingMaxHealth = getDouble("mobs.creaking.attributes.max_health", creakingMaxHealth);
-+            creakingScale = Mth.clamp(getDouble("mobs.creaking.attributes.scale", creakingScale), 0.0625D, 16.0D);
-         }
+         creakingRidable = getBoolean("mobs.creaking.ridable", creakingRidable);
+         creakingRidableInWater = getBoolean("mobs.creaking.ridable-in-water", creakingRidableInWater);
+         creakingControllable = getBoolean("mobs.creaking.controllable", creakingControllable);
++        creakingMaxHealth = getDouble("mobs.creaking.attributes.max_health", creakingMaxHealth);
++        creakingScale = Mth.clamp(getDouble("mobs.creaking.attributes.scale", creakingScale), 0.0625D, 16.0D);
      }
  
      public boolean creeperRidable = false;
@@ -1921,7 +1919,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba
      }
  
      public boolean dolphinRidable = false;
-@@ -242,80 +369,175 @@ public class PurpurWorldConfig {
+@@ -240,80 +367,175 @@ public class PurpurWorldConfig {
      public int dolphinSpitCooldown = 20;
      public float dolphinSpitSpeed = 1.0F;
      public float dolphinSpitDamage = 2.0F;
@@ -2097,7 +2095,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba
      }
  
      public boolean frogRidable = false;
-@@ -333,147 +555,342 @@ public class PurpurWorldConfig {
+@@ -331,147 +553,342 @@ public class PurpurWorldConfig {
      public boolean ghastRidableInWater = true;
      public boolean ghastControllable = true;
      public double ghastMaxY = 320D;
@@ -2440,7 +2438,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba
      }
  
      public boolean phantomRidable = false;
-@@ -483,6 +900,10 @@ public class PurpurWorldConfig {
+@@ -481,6 +898,10 @@ public class PurpurWorldConfig {
      public float phantomFlameDamage = 1.0F;
      public int phantomFlameFireTime = 8;
      public boolean phantomAllowGriefing = false;
@@ -2451,7 +2449,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba
      private void phantomSettings() {
          phantomRidable = getBoolean("mobs.phantom.ridable", phantomRidable);
          phantomRidableInWater = getBoolean("mobs.phantom.ridable-in-water", phantomRidableInWater);
-@@ -491,191 +912,405 @@ public class PurpurWorldConfig {
+@@ -489,191 +910,405 @@ public class PurpurWorldConfig {
          phantomFlameDamage = (float) getDouble("mobs.phantom.flames.damage", phantomFlameDamage);
          phantomFlameFireTime = getInt("mobs.phantom.flames.fire-time", phantomFlameFireTime);
          phantomAllowGriefing = getBoolean("mobs.phantom.allow-griefing", phantomAllowGriefing);
@@ -2857,7 +2855,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba
      }
  
      public boolean tadpoleRidable = false;
-@@ -690,64 +1325,137 @@ public class PurpurWorldConfig {
+@@ -688,64 +1323,137 @@ public class PurpurWorldConfig {
      public boolean traderLlamaRidable = false;
      public boolean traderLlamaRidableInWater = false;
      public boolean traderLlamaControllable = true;
@@ -2995,7 +2993,7 @@ index 51c276332d491e9d668b660e539472e843e06a66..c2ab4f2745c0040744ced0e19d4620ba
      }
  
      public boolean wardenRidable = false;
-@@ -762,83 +1470,183 @@ public class PurpurWorldConfig {
+@@ -760,83 +1468,183 @@ public class PurpurWorldConfig {
      public boolean witchRidable = false;
      public boolean witchRidableInWater = true;
      public boolean witchControllable = true;

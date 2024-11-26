@@ -70,10 +70,10 @@ index cb5cf34781de4e87074a70a447fd463280147bdc..e6fb53b828c1a2e76d398e88449260f6
          this.targetSelector.addGoal(5, new NearestAttackableTargetGoal<>(this, Turtle.class, 10, true, false, Turtle.BABY_ON_LAND_SELECTOR));
      }
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 8c0e175823cc3c33800b9d03bd2aa4cc2a330a8a..5de30b7389b22b40ed8ceafb1182f886b4400b12 100644
+index 0e7473973fe06f51e28bb8651856ed52a9a51d92..f6771afafe3e9e672059f504982e90449492449c 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -1986,6 +1986,7 @@ public class PurpurWorldConfig {
+@@ -1984,6 +1984,7 @@ public class PurpurWorldConfig {
      public boolean zombieJockeyOnlyBaby = true;
      public double zombieJockeyChance = 0.05D;
      public boolean zombieJockeyTryExistingChickens = true;
@@ -81,7 +81,7 @@ index 8c0e175823cc3c33800b9d03bd2aa4cc2a330a8a..5de30b7389b22b40ed8ceafb1182f886
      private void zombieSettings() {
          zombieRidable = getBoolean("mobs.zombie.ridable", zombieRidable);
          zombieRidableInWater = getBoolean("mobs.zombie.ridable-in-water", zombieRidableInWater);
-@@ -2001,6 +2002,7 @@ public class PurpurWorldConfig {
+@@ -1999,6 +2000,7 @@ public class PurpurWorldConfig {
          zombieJockeyOnlyBaby = getBoolean("mobs.zombie.jockey.only-babies", zombieJockeyOnlyBaby);
          zombieJockeyChance = getDouble("mobs.zombie.jockey.chance", zombieJockeyChance);
          zombieJockeyTryExistingChickens = getBoolean("mobs.zombie.jockey.try-existing-chickens", zombieJockeyTryExistingChickens);

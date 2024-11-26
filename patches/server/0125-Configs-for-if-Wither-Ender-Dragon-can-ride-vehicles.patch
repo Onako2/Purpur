@@ -29,10 +29,10 @@ index 6124c72380f2a95ad70b453a1e4f1b416bc8bfe6..d211339a43c38d6298fc2c5d40a9f832
      }
  
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 67dc369865f585efc81b4e32f2d25127421d336b..bdc667e56126a4458f632ba33f596b9db03a6285 100644
+index 5b9ca029c3dd765fe52a31e4c796b28e3c22302a..f0d75a5f4f9d1fc9e8e33be1412ef4c8c96573b7 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -981,6 +981,7 @@ public class PurpurWorldConfig {
+@@ -979,6 +979,7 @@ public class PurpurWorldConfig {
      public boolean enderDragonAlwaysDropsFullExp = false;
      public boolean enderDragonBypassMobGriefing = false;
      public boolean enderDragonTakeDamageFromWater = false;
@@ -40,7 +40,7 @@ index 67dc369865f585efc81b4e32f2d25127421d336b..bdc667e56126a4458f632ba33f596b9d
      private void enderDragonSettings() {
          enderDragonRidable = getBoolean("mobs.ender_dragon.ridable", enderDragonRidable);
          enderDragonRidableInWater = getBoolean("mobs.ender_dragon.ridable-in-water", enderDragonRidableInWater);
-@@ -999,6 +1000,7 @@ public class PurpurWorldConfig {
+@@ -997,6 +998,7 @@ public class PurpurWorldConfig {
          enderDragonAlwaysDropsFullExp = getBoolean("mobs.ender_dragon.always-drop-full-exp", enderDragonAlwaysDropsFullExp);
          enderDragonBypassMobGriefing = getBoolean("mobs.ender_dragon.bypass-mob-griefing", enderDragonBypassMobGriefing);
          enderDragonTakeDamageFromWater = getBoolean("mobs.ender_dragon.takes-damage-from-water", enderDragonTakeDamageFromWater);
@@ -48,7 +48,7 @@ index 67dc369865f585efc81b4e32f2d25127421d336b..bdc667e56126a4458f632ba33f596b9d
      }
  
      public boolean endermanRidable = false;
-@@ -2285,6 +2287,7 @@ public class PurpurWorldConfig {
+@@ -2283,6 +2285,7 @@ public class PurpurWorldConfig {
      public int witherHealthRegenDelay = 20;
      public boolean witherBypassMobGriefing = false;
      public boolean witherTakeDamageFromWater = false;
@@ -56,7 +56,7 @@ index 67dc369865f585efc81b4e32f2d25127421d336b..bdc667e56126a4458f632ba33f596b9d
      private void witherSettings() {
          witherRidable = getBoolean("mobs.wither.ridable", witherRidable);
          witherRidableInWater = getBoolean("mobs.wither.ridable-in-water", witherRidableInWater);
-@@ -2305,6 +2308,7 @@ public class PurpurWorldConfig {
+@@ -2303,6 +2306,7 @@ public class PurpurWorldConfig {
          witherHealthRegenDelay = getInt("mobs.wither.health-regen-delay", witherHealthRegenDelay);
          witherBypassMobGriefing = getBoolean("mobs.wither.bypass-mob-griefing", witherBypassMobGriefing);
          witherTakeDamageFromWater = getBoolean("mobs.wither.takes-damage-from-water", witherTakeDamageFromWater);

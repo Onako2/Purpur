@@ -104,10 +104,10 @@ index 8e895d6f84f7d84b219f2424909dd42e5f08dec4..53dcce0701d713c5dd097340a91b8be4
 +    // Purpur end
  }
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 749b18bddd706ff50674ede0d08b2aee1bdeb5d6..a5254f36a70709c073fef11c5fa134ce2cfc49b6 100644
+index c49e93d6afd7fe6c7c8397154a9580ab023ed529..a1c3e7d57d716f785e9ba677c8f259ffe030a165 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -2908,6 +2908,9 @@ public class PurpurWorldConfig {
+@@ -2906,6 +2906,9 @@ public class PurpurWorldConfig {
      public boolean villagerAllowTrading = true;
      public boolean villagerAlwaysDropExp = false;
      public int villagerMinimumDemand = 0;
@@ -117,7 +117,7 @@ index 749b18bddd706ff50674ede0d08b2aee1bdeb5d6..a5254f36a70709c073fef11c5fa134ce
      private void villagerSettings() {
          villagerRidable = getBoolean("mobs.villager.ridable", villagerRidable);
          villagerRidableInWater = getBoolean("mobs.villager.ridable-in-water", villagerRidableInWater);
-@@ -2931,6 +2934,18 @@ public class PurpurWorldConfig {
+@@ -2929,6 +2932,18 @@ public class PurpurWorldConfig {
          villagerAllowTrading = getBoolean("mobs.villager.allow-trading", villagerAllowTrading);
          villagerAlwaysDropExp = getBoolean("mobs.villager.always-drop-exp", villagerAlwaysDropExp);
          villagerMinimumDemand = getInt("mobs.villager.minimum-demand", villagerMinimumDemand);

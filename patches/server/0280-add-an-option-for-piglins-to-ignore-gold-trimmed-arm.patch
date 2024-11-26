@@ -29,10 +29,10 @@ index e283b1296c1e831376bfe9491cbf02ed4b3fffe4..27a6de70530c2a1cbe2f77a7fb493038
          piglin.getBrain().eraseMemory(MemoryModuleType.WALK_TARGET);
          piglin.getNavigation().stop();
 diff --git a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-index 35ba83ca40394f069ae2aaa2c2a6378b2c1c824b..d53c7e622c95736206de20cb18429054618d6f55 100644
+index 14bcd0038c9d16e9de9c16d0edbdde0c0e614d97..14346bf253cf1f420e024eb119ea26e45a7c9a59 100644
 --- a/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
 +++ b/src/main/java/org/purpurmc/purpur/PurpurWorldConfig.java
-@@ -2329,6 +2329,7 @@ public class PurpurWorldConfig {
+@@ -2327,6 +2327,7 @@ public class PurpurWorldConfig {
      public int piglinPortalSpawnModifier = 2000;
      public boolean piglinAlwaysDropExp = false;
      public double piglinHeadVisibilityPercent = 0.5D;
@@ -40,7 +40,7 @@ index 35ba83ca40394f069ae2aaa2c2a6378b2c1c824b..d53c7e622c95736206de20cb18429054
      private void piglinSettings() {
          piglinRidable = getBoolean("mobs.piglin.ridable", piglinRidable);
          piglinRidableInWater = getBoolean("mobs.piglin.ridable-in-water", piglinRidableInWater);
-@@ -2345,6 +2346,7 @@ public class PurpurWorldConfig {
+@@ -2343,6 +2344,7 @@ public class PurpurWorldConfig {
          piglinPortalSpawnModifier = getInt("mobs.piglin.portal-spawn-modifier", piglinPortalSpawnModifier);
          piglinAlwaysDropExp = getBoolean("mobs.piglin.always-drop-exp", piglinAlwaysDropExp);
          piglinHeadVisibilityPercent = getDouble("mobs.piglin.head-visibility-percent", piglinHeadVisibilityPercent);
